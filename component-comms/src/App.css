@@ -1,7 +1,150 @@
-.tree .nodes{
+/* Tree container */
+.tree {
+    padding: 2rem;
+}
 
-    display: flex;
-    border: 1px solid #eee;
-    width: fit-content;
+ h1 {
+    margin-bottom: 3rem;
     text-align: center;
+}
+
+.tree .title{
+    position: relative;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 2px;
+    height: 2rem;
+    background: #333;
+}
+
+/* Main nodes container - holds sections */
+.tree > .nodes {
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    position: relative;
+}
+
+/* Horizontal line connecting sections */
+.tree > .nodes::before {
+   content: '';
+    position: absolute;
+    top: 0;
+    left: 50.2%;
+    transform: translateX(-50%);
+    width: 369px;
+    height: 2px;
+    background: #333;
+}
+
+/* Vertical line from title to sections connector */
+.tree > .nodes::after {
+    content: '';
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    width: 2px;
+    height: 2rem;
+    background: #333;
+}
+
+/* Section styling */
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-top: 2rem;
+}
+
+/* Vertical line from sections connector to section */
+.section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 2rem;
+    background: #333;
+}
+
+.section > h4 {
+    padding: 1rem 2rem;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background: white;
+    margin: 0 0 3rem 0;
+    position: relative;
+}
+
+/* Vertical line from section to forms */
+.section > h4::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 2px;
+    height: 3.2rem;
+    background: #333;
+}
+
+/* Forms container */
+.section .nodes {
+    display: flex;
+    gap: 2rem;
+    position: relative;
+}
+
+/* Horizontal line connecting forms */
+.section .nodes::before {
+    content: '';
+    position: absolute;
+    top: 0rem;
+    left: 69px;
+    right: 0;
+    width: 170px;
+    height: 2px;
+    background: #333;
+}
+
+/* Vertical line from section to forms connector */
+.section .nodes::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 0;
+    background: #333;
+}
+
+/* Individual form styling */
+.form {
+    position: relative;
+    padding-top: 2rem;
+}
+
+/* Vertical line from horizontal connector to form */
+.form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 2rem;
+    background: #333;
+}
+
+.form > h5 {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #666;
+    border-radius: 6px;
+    background: #f9f9f9;
+    margin: 0;
+    white-space: nowrap;
 }
