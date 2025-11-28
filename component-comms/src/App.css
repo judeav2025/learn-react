@@ -1,0 +1,7 @@
+.tree .nodes{
+
+    display: flex;
+    border: 1px solid #eee;
+    width: fit-content;
+    text-align: center;
+}
