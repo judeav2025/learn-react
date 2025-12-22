@@ -5,7 +5,9 @@ export function Tree() {
   return (
     <div className="tree">
       <div className="title">
-        <h1>UI Tree</h1>
+        <div className="h1-container">
+          <h1>UI Tree</h1>
+        </div>
       </div>
       <div className="nodes">
         <Section name="Private" />

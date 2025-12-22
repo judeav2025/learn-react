@@ -4,22 +4,29 @@
     width: 1170px;
 }
 
- h1 {
+
+h1 {
     margin-bottom: 3rem;
     text-align: center;
+}
+
+.h1-container{
+    display: flex;
+    justify-content: center;
 }
 
 .tree .title{
     position: relative;
 }
 
-h1::after {
+.title::after {
+
     content: '';
     position: absolute;
-    top: 100%;
+    top: 79%;
     left: 50%;
     width: 2px;
-    height: 2rem;
+    height: 1.4rem;
     background: #333;
 }
 
@@ -102,6 +109,12 @@ h1::after {
     height: 2px;
     background: #333;
 }
+
+h4 div.input-val{
+    font-size: small;
+    font-weight: 100;
+}
+
 
 
 
